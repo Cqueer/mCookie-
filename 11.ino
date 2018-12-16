@@ -17,8 +17,8 @@ String jsonToSend;
 SoftwareSerial mySerial(2,3);
 #define EspSerial mySerial
 #define UARTSPEED  9600
-#define SSID "L0V3Jenny"
-#define PASSWORD "sam83315795"
+#define SSID "xxxxxxxxx"
+#define PASSWORD "xxxxxxxx"
 #define HOST_NAME "api.heclouds.com"
 #define HOST_PORT (80)
 ESP8266 wifi(&EspSerial);
@@ -85,7 +85,7 @@ void online()
   Serial.print("create tcp err\r\n");
  }
  uint8_t buffer[300] = {0};
- String Poststring="GET /devices/504382102/datapoints?datastream_id=st&limit=1 HTTP/1.1\r\napi-key:iu=bBuQYARztziUBERYE7Jp38kY=\r\nHost:api.heclouds.com\r\nConnection:close\r\n\r\n\r\n";
+ String Poststring="GET /devices/xxxxxxxx/datapoints?datastream_id=st&limit=1 HTTP/1.1\r\napi-key:xxxxxxxxxxxxxxxxxxx\r\nHost:api.heclouds.com\r\nConnection:close\r\n\r\n\r\n";
  const char *postArray=Poststring.c_str();
   wifi.send((const uint8_t*)postArray,strlen(postArray));
   Serial.println(F("Send Success!"));
